@@ -9,9 +9,10 @@
   /* Colours */
   --color-text: #030c01;
   --color-bg: #ffffff;
-  --color-surface: #f5f5f7;
+  --color-surface: #ffffff;
   --color-accent-yellow: #e8e81c;
   --color-accent-green: #42ed13;
+  --color-footer-bg: #eeee60;
   --color-border: rgba(3, 12, 1, 0.15);
   --color-muted: rgba(3, 12, 1, 0.6);
 
@@ -1059,7 +1060,7 @@ button {
    Footer
    ---------------------------------------------------------------------------- */
 .footer {
-  background-color: var(--color-accent-yellow);
+  background-color: var(--color-footer-bg);
   color: var(--color-text);
   padding-block: 48px 24px;
 }
