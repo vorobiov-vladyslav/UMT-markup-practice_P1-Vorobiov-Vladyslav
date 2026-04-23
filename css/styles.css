@@ -57,7 +57,7 @@
   :root {
     --fs-h2: 48px;
     --fs-h1: 56px;
-    --container-pad: 52px;
+    --container-pad: 28px;
     --section-y: 92px;
   }
 }
@@ -271,7 +271,7 @@ button {
 
 .header__list {
   display: flex;
-  gap: 24px;
+  gap: 32px;
 }
 
 .header__link {
@@ -929,6 +929,12 @@ button {
   margin-top: 32px;
 }
 
+@media (min-width: 768px) {
+  .testimonials__arrows {
+    justify-content: flex-end;
+  }
+}
+
 /* ----------------------------------------------------------------------------
    Contact
    ---------------------------------------------------------------------------- */
@@ -1145,18 +1151,33 @@ button {
 }
 
 @media (min-width: 1440px) {
+  .footer {
+    padding-block: 80px;
+  }
+
+  .footer__container {
+    gap: 80px;
+  }
+
   .footer__top {
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
     text-align: left;
   }
 
-  .footer__logo img {
-    width: 99px;
+  .footer__logo {
+    flex: 1 1 0;
   }
 
   .footer__list {
-    gap: 16px 24px;
+    gap: 32px;
+  }
+
+  .footer__socials {
+    flex: 1 1 0;
+    justify-content: flex-end;
+    gap: 12px;
   }
 }
 
