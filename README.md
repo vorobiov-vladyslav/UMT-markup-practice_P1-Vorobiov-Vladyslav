@@ -42,6 +42,6 @@ curl -s -H "Content-Type: text/html; charset=utf-8" \
 
 CSS:
 ```bash
-curl -s "https://jigsaw.w3.org/css-validator/validator?profile=css3svg&output=json" \
-  --data-urlencode "text@css/styles.css"
+curl -s -F "file=@css/styles.css;type=text/css" -F "profile=css3svg" -F "output=json" \
+  "https://jigsaw.w3.org/css-validator/validator"
 ```
