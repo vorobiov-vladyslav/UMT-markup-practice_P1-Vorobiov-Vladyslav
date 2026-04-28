@@ -219,13 +219,22 @@ button {
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
-  transition: opacity var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    filter var(--transition);
 }
 
 .button:hover,
 .button:focus-visible {
   color: var(--color-text);
-  opacity: 0.5;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px -12px rgba(3, 12, 1, 0.35);
+  filter: saturate(1.1);
+}
+
+.button:active {
+  transform: translateY(0);
 }
 
 /* ----------------------------------------------------------------------------
@@ -781,6 +790,7 @@ button {
 .carousel-arrow:hover,
 .carousel-arrow:focus-visible {
   background-color: #d9fbcf;
+  transform: translateY(-1px);
 }
 
 .carousel-arrow svg {
@@ -1095,12 +1105,12 @@ button {
   width: 40px;
   height: 40px;
   color: var(--color-text);
-  transition: opacity var(--transition);
+  transition: transform var(--transition);
 }
 
 .footer__social:hover,
 .footer__social:focus-visible {
-  opacity: 0.6;
+  transform: translateY(-2px);
 }
 
 .footer__social svg {
