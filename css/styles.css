@@ -615,6 +615,12 @@ button {
   font-size: 32px;
 }
 
+@media (min-width: 1440px) {
+  .top-selling__title {
+    font-size: var(--font-size-h2);
+  }
+}
+
 .top-selling__list {
   display: grid;
   grid-template-columns: 1fr;
