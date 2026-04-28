@@ -220,21 +220,30 @@ button {
   white-space: nowrap;
   cursor: pointer;
   transition:
-    transform var(--transition),
-    box-shadow var(--transition),
-    filter var(--transition);
+    opacity var(--transition),
+    background-color var(--transition),
+    border-color var(--transition),
+    color var(--transition);
 }
 
 .button:hover,
 .button:focus-visible {
   color: var(--color-text);
-  transform: translateY(-1px);
-  box-shadow: 0 10px 24px -12px rgba(3, 12, 1, 0.35);
-  filter: saturate(1.1);
+  opacity: 0.5;
 }
 
 .button:active {
-  transform: translateY(0);
+  background-image: none;
+  background-color: #4e544d;
+  border-color: #4e544d;
+  color: var(--color-bg);
+  opacity: 1;
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  opacity: 0.2;
+  pointer-events: none;
 }
 
 /* ----------------------------------------------------------------------------
