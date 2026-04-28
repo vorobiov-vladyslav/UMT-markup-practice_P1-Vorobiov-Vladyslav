@@ -25,7 +25,7 @@
   --font-size-body-md: 18px;
   --font-size-body-lg: 20px;
   --font-size-h3: 20px;
-  --font-size-h2: 36px;
+  --font-size-h2: 34px;
   --font-size-h1: 36px;
 
   --lh-heading: 1.2;
@@ -33,7 +33,7 @@
   --tracking-heading: -0.02em;
 
   /* Layout */
-  --container-max: 1336px;
+  --container-max: 1280px;
   --container-pad: 20px;
   --section-y: 60px;
 
@@ -58,7 +58,7 @@
   :root {
     --font-size-h2: 48px;
     --font-size-h1: 56px;
-    --container-pad: 28px;
+    --container-pad: 80px;
     --section-y: 92px;
   }
 }
@@ -217,11 +217,9 @@ button {
   font-weight: 500;
   line-height: var(--lh-body);
   text-align: center;
+  white-space: nowrap;
   cursor: pointer;
-  transition:
-    transform var(--transition),
-    box-shadow var(--transition),
-    filter var(--transition);
+  transition: opacity var(--transition);
 }
 
 .button:hover,
@@ -456,7 +454,7 @@ button {
 }
 
 .hero__content {
-  max-width: 560px;
+  max-width: 252px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -614,6 +612,7 @@ button {
 
 .top-selling__title {
   margin-bottom: 32px;
+  font-size: 32px;
 }
 
 .top-selling__list {
