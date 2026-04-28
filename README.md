@@ -2,12 +2,14 @@
 
 Responsive landing page built to match the Flora Figma design.
 
+**Live:** https://vorobiov-vladyslav.github.io/UMT-markup-practice_P1-Vorobiov-Vladyslav/
+
 ## What's inside
 
 - Semantic HTML with 6 sections: hero, about, top-selling bouquets, bouquets grid, testimonials, contact
 - Mobile-first CSS with three breakpoints: **375 / 768 / 1440**
 - SVG sprite (`images/icons.svg`) referenced via `<use href="...#icon-name">`
-- Mobile burger menu (vanilla JS, closes on Esc / resize to desktop)
+- Mobile burger menu (vanilla JS, opens via `is-open` class, closes on Esc / resize to desktop)
 - AOS scroll animations via CDN
 - Google Fonts: Hanuman (headings) + Roboto (body)
 - W3C-valid HTML and CSS
@@ -18,8 +20,7 @@ Responsive landing page built to match the Flora Figma design.
 index.html
 css/styles.css
 js/menu.js
-images/            # photos, logos, icons.svg sprite
-favicon.svg
+images/            # photos, logos, icons.svg sprite, favicon.svg
 ```
 
 ## Run locally
