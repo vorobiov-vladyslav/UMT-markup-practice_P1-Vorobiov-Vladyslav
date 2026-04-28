@@ -20,13 +20,13 @@
   --font-heading: "Hanuman", Georgia, "Times New Roman", serif;
   --font-body: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  --fs-body-sm: 14px;
-  --fs-body: 16px;
-  --fs-body-md: 18px;
-  --fs-body-lg: 20px;
-  --fs-h3: 20px;
-  --fs-h2: 36px;
-  --fs-h1: 36px;
+  --font-size-body-sm: 14px;
+  --font-size-body: 16px;
+  --font-size-body-md: 18px;
+  --font-size-body-lg: 20px;
+  --font-size-h3: 20px;
+  --font-size-h2: 36px;
+  --font-size-h1: 36px;
 
   --lh-heading: 1.2;
   --lh-body: 1.5;
@@ -47,8 +47,8 @@
 
 @media (min-width: 768px) {
   :root {
-    --fs-h2: 34px;
-    --fs-h1: 36px;
+    --font-size-h2: 34px;
+    --font-size-h1: 36px;
     --container-pad: 32px;
     --section-y: 64px;
   }
@@ -56,8 +56,8 @@
 
 @media (min-width: 1440px) {
   :root {
-    --fs-h2: 48px;
-    --fs-h1: 56px;
+    --font-size-h2: 48px;
+    --font-size-h1: 56px;
     --container-pad: 28px;
     --section-y: 92px;
   }
@@ -83,7 +83,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: var(--fs-body);
+  font-size: var(--font-size-body);
   line-height: var(--lh-body);
   overflow-x: hidden;
 }
@@ -190,7 +190,7 @@ button {
 .section-title {
   font-family: var(--font-heading);
   font-weight: 400;
-  font-size: var(--fs-h2);
+  font-size: var(--font-size-h2);
   line-height: var(--lh-heading);
   letter-spacing: var(--tracking-heading);
   color: var(--color-text);
@@ -213,7 +213,7 @@ button {
   );
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: var(--fs-body);
+  font-size: var(--font-size-body);
   font-weight: 500;
   line-height: var(--lh-body);
   text-align: center;
@@ -227,13 +227,7 @@ button {
 .button:hover,
 .button:focus-visible {
   color: var(--color-text);
-  transform: translateY(-1px);
-  box-shadow: 0 10px 24px -12px rgba(3, 12, 1, 0.35);
-  filter: saturate(1.1);
-}
-
-.button:active {
-  transform: translateY(0);
+  opacity: 0.5;
 }
 
 /* ----------------------------------------------------------------------------
@@ -276,14 +270,14 @@ button {
 }
 
 .header__link {
-  font-size: var(--fs-body);
+  font-size: var(--font-size-body);
   color: var(--color-text);
-  transition: color var(--transition);
+  transition: opacity var(--transition);
 }
 
 .header__link:hover,
 .header__link:focus-visible {
-  color: var(--color-accent-green);
+  opacity: 0.6;
 }
 
 .header__cta {
@@ -418,14 +412,14 @@ button {
 }
 
 .mobile-menu__link {
-  font-size: var(--fs-body);
+  font-size: var(--font-size-body);
   color: var(--color-text);
-  transition: color var(--transition);
+  transition: opacity var(--transition);
 }
 
 .mobile-menu__link:hover,
 .mobile-menu__link:focus-visible {
-  color: var(--color-accent-green);
+  opacity: 0.6;
 }
 
 .mobile-menu__cta {
@@ -471,13 +465,13 @@ button {
 .hero__title {
   font-family: var(--font-heading);
   font-weight: 400;
-  font-size: var(--fs-h1);
+  font-size: var(--font-size-h1);
   line-height: var(--lh-heading);
   letter-spacing: var(--tracking-heading);
 }
 
 .hero__text {
-  font-size: var(--fs-body-md);
+  font-size: var(--font-size-body-md);
   color: var(--color-text);
 }
 
@@ -557,13 +551,13 @@ button {
 .about__title {
   font-family: var(--font-heading);
   font-weight: 400;
-  font-size: var(--fs-h2);
+  font-size: var(--font-size-h2);
   line-height: var(--lh-heading);
   letter-spacing: var(--tracking-heading);
 }
 
 .about__text {
-  font-size: var(--fs-body-md);
+  font-size: var(--font-size-body-md);
 }
 
 .about__image {
@@ -703,18 +697,18 @@ button {
 .product__name {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: var(--fs-body-md);
+  font-size: var(--font-size-body-md);
   line-height: var(--lh-body);
 }
 
 .product__desc {
-  font-size: var(--fs-body-sm);
+  font-size: var(--font-size-body-sm);
   color: var(--color-text);
 }
 
 .product__price {
   font-weight: 600;
-  font-size: var(--fs-body-lg);
+  font-size: var(--font-size-body-lg);
 }
 
 /* Bouquet grid cards — square */
@@ -781,10 +775,7 @@ button {
 
 .carousel-arrow:hover,
 .carousel-arrow:focus-visible {
-  background-color: var(--color-text);
-  border-color: var(--color-text);
-  color: var(--color-bg);
-  transform: translateY(-1px);
+  background-color: #d9fbcf;
 }
 
 .carousel-arrow svg {
@@ -812,7 +803,7 @@ button {
 
 .bouquets__subtitle {
   max-width: 560px;
-  font-size: var(--fs-body-md);
+  font-size: var(--font-size-body-md);
 }
 
 .bouquets__grid {
@@ -913,12 +904,12 @@ button {
 }
 
 .testimonial__quote p {
-  font-size: var(--fs-body-md);
+  font-size: var(--font-size-body-md);
 }
 
 .testimonial__author {
   font-weight: 600;
-  font-size: var(--fs-body);
+  font-size: var(--font-size-body);
   color: var(--color-muted);
   margin-top: auto;
 }
@@ -950,11 +941,11 @@ button {
 
 .contact__tag {
   font-weight: 600;
-  font-size: var(--fs-body);
+  font-size: var(--font-size-body);
 }
 
 .contact__text {
-  font-size: var(--fs-body-md);
+  font-size: var(--font-size-body-md);
   max-width: 560px;
 }
 
@@ -979,7 +970,7 @@ button {
 .contact__label {
   font-family: var(--font-heading);
   font-weight: 400;
-  font-size: var(--fs-body-md);
+  font-size: var(--font-size-body-md);
   letter-spacing: -0.01em;
   margin-bottom: 8px;
 }
@@ -991,7 +982,7 @@ button {
 }
 
 .contact__address {
-  font-size: var(--fs-body);
+  font-size: var(--font-size-body);
 }
 
 .contact__image {
@@ -1078,14 +1069,13 @@ button {
 }
 
 .footer__link {
-  font-size: var(--fs-body);
-  transition: color var(--transition);
+  font-size: var(--font-size-body);
+  transition: opacity var(--transition);
 }
 
 .footer__link:hover,
 .footer__link:focus-visible {
-  color: var(--color-text);
-  text-decoration: underline;
+  opacity: 0.6;
 }
 
 .footer__socials {
@@ -1100,13 +1090,12 @@ button {
   width: 40px;
   height: 40px;
   color: var(--color-text);
-  transition: transform var(--transition);
+  transition: opacity var(--transition);
 }
 
 .footer__social:hover,
 .footer__social:focus-visible {
-  transform: translateY(-2px);
-  color: var(--color-text);
+  opacity: 0.6;
 }
 
 .footer__social svg {
@@ -1123,7 +1112,7 @@ button {
 
 .footer__copy {
   text-align: center;
-  font-size: var(--fs-body-sm);
+  font-size: var(--font-size-body-sm);
 }
 
 @media (min-width: 768px) {
