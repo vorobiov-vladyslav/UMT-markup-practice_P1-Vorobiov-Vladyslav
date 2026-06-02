@@ -469,6 +469,13 @@ button {
   min-height: 510px;
 }
 
+/* Retina background: swap to the @2x asset on high-DPR screens */
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/hero@2x.jpg");
+  }
+}
+
 .hero__container {
   position: relative;
   padding-block: 48px;
