@@ -3,7 +3,7 @@
 Responsive flower-shop landing page built to match the Flora Figma design, with an
 interactive client-side layer (retina graphics, modals, and a data-driven catalogue).
 
-**Live:** https://vorobiov-vladyslav.github.io/UMT-markup-practice_P1-Vorobiov-Vladyslav/
+**Live:** https://vorobiov-vladyslav.github.io/UMT-markup-practice_P2-Vorobiov-Vladyslav/
 
 ## What's inside
 
