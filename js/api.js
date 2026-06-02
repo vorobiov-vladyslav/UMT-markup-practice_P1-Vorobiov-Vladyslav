@@ -27,3 +27,9 @@ export async function getBestsellers() {
   const { data } = await http.get("/bouquets", { params: { featured: true } });
   return data;
 }
+
+/** Submit an order (request form in the modal). */
+export async function postOrder(order) {
+  const { data } = await http.post("/orders", order);
+  return data;
+}

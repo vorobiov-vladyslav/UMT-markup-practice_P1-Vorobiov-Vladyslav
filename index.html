@@ -351,6 +351,118 @@
       <a class="button mobile-menu__cta" href="#bouquets" data-menu-close>Explore Bouquets</a>
     </div>
 
+    <!-- Product details modal — content rendered dynamically (js/order.js) -->
+    <div class="modal" id="product-modal">
+      <div class="modal__backdrop" data-modal-close></div>
+      <div
+        class="modal__dialog modal__dialog--product"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="product-modal-title"
+        tabindex="-1"
+      >
+        <button class="modal__close" type="button" aria-label="Close dialog" data-modal-close>
+          <svg width="24" height="24" aria-hidden="true">
+            <use href="images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="product-details"></div>
+      </div>
+    </div>
+
+    <!-- Order request modal -->
+    <div class="modal" id="order-modal">
+      <div class="modal__backdrop" data-modal-close></div>
+      <div
+        class="modal__dialog modal__dialog--order"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="order-modal-title"
+        tabindex="-1"
+      >
+        <button class="modal__close" type="button" aria-label="Close dialog" data-modal-close>
+          <svg width="24" height="24" aria-hidden="true">
+            <use href="images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="modal__title" id="order-modal-title">Order</h2>
+
+        <form class="order-form" novalidate>
+          <div class="field">
+            <label class="field__label" for="order-name">Name<span aria-hidden="true">*</span></label>
+            <input
+              class="field__input"
+              id="order-name"
+              name="name"
+              type="text"
+              placeholder="Ann"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="order-phone">Phone<span aria-hidden="true">*</span></label>
+            <input
+              class="field__input"
+              id="order-phone"
+              name="phone"
+              type="tel"
+              placeholder="+1 (555) 123-4567"
+              autocomplete="tel"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="order-address">Address</label>
+            <input
+              class="field__input"
+              id="order-address"
+              name="address"
+              type="text"
+              placeholder="456 Floral Ave, Sydney NSW 2000 AU"
+              autocomplete="address-line1"
+            />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="order-message">Message</label>
+            <textarea
+              class="field__input field__input--textarea"
+              id="order-message"
+              name="message"
+              rows="4"
+              placeholder="Type your message..."
+            ></textarea>
+          </div>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" name="agree" required />
+            <span class="checkbox__box">
+              <svg class="checkbox__icon" width="14" height="14" aria-hidden="true">
+                <use href="images/icons.svg#icon-check"></use>
+              </svg>
+            </span>
+            <span class="checkbox__text">I agree to the Terms &amp; License Agreement</span>
+          </label>
+
+          <button class="button order-form__submit" type="submit">Go to Checkout</button>
+          <p class="order-form__status order-form__status--error" role="alert"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success toast (shown after an order is placed) -->
+    <div class="toast" id="order-toast" role="status" aria-live="polite">
+      <span class="toast__icon">
+        <svg width="20" height="20" aria-hidden="true">
+          <use href="images/icons.svg#icon-check"></use>
+        </svg>
+      </span>
+      <span class="toast__text">Order received! We&rsquo;ll be in touch shortly.</span>
+    </div>
+
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="js/menu.js" defer></script>
     <script>

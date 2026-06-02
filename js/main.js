@@ -2,6 +2,8 @@
 import { getBestsellers } from "./api.js";
 import { renderProducts, setListState, clearList, refreshAOS } from "./render.js";
 import { initBouquets } from "./bouquets.js";
+import { initModals } from "./modal.js";
+import { initOrder } from "./order.js";
 
 const carousel = document.querySelector(".top-selling__list");
 
@@ -20,5 +22,7 @@ async function loadBestsellers() {
   }
 }
 
+initModals();
+initOrder();
 loadBestsellers();
 initBouquets();
