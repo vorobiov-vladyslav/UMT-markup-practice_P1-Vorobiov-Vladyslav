@@ -109,6 +109,46 @@
       "image": "images/soft-bloom.jpg",
       "image2x": "images/soft-bloom@2x.jpg",
       "alt": "Soft Bloom bouquet — pink carnations and roses wrapped in satin paper"
+    },
+    {
+      "name": "Rose Serenade",
+      "description": "An elegant gathering of garden roses and soft greenery — timeless, romantic, and made to impress.",
+      "price": 42,
+      "category": "roses",
+      "featured": false,
+      "image": "images/peach-meadow.jpg",
+      "image2x": "images/peach-meadow@2x.jpg",
+      "alt": "Rose Serenade bouquet — garden roses with soft greenery"
+    },
+    {
+      "name": "Garden Whisper",
+      "description": "A breezy mix of spray roses, eucalyptus, and seasonal blooms — light, natural, and effortlessly charming.",
+      "price": 38,
+      "category": "mixed",
+      "featured": false,
+      "image": "images/pastel-garden.jpg",
+      "image2x": "images/pastel-garden@2x.jpg",
+      "alt": "Garden Whisper bouquet — spray roses and eucalyptus in soft tones"
+    },
+    {
+      "name": "Autumn Glow",
+      "description": "Warm seasonal blooms with sunflowers and daisies — cheerful and full of late-summer warmth.",
+      "price": 45,
+      "category": "seasonal",
+      "featured": false,
+      "image": "images/field-joy.jpg",
+      "image2x": "images/field-joy@2x.jpg",
+      "alt": "Autumn Glow bouquet — sunflowers and daisies in warm tones"
+    },
+    {
+      "name": "Velvet Noir",
+      "description": "A luxe arrangement of deep roses and ivory accents with silver foliage — sophisticated and intimate.",
+      "price": 58,
+      "category": "premium",
+      "featured": false,
+      "image": "images/blush-romance.jpg",
+      "image2x": "images/blush-romance@2x.jpg",
+      "alt": "Velvet Noir bouquet — deep roses and ivory accents with silver foliage"
     }
   ],
   "orders": [],
