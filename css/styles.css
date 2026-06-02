@@ -92,6 +92,13 @@ body.is-menu-open {
   overflow: hidden;
 }
 
+/* Contain the horizontal overflow from AOS slide-in transforms (fade-left/right). On
+   mobile, overflow-x:hidden on body/html is unreliable, but clipping on a real wrapper
+   element (main) works — and it leaves the body scroll-lock untouched. */
+main {
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
