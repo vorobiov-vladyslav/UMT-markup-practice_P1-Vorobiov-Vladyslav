@@ -144,10 +144,28 @@
             </p>
           </div>
 
+          <div class="bouquets__filters" role="group" aria-label="Filter bouquets by category">
+            <button type="button" class="chip chip--active" data-category="all" aria-pressed="true">
+              All
+            </button>
+            <button type="button" class="chip" data-category="roses" aria-pressed="false">
+              Roses
+            </button>
+            <button type="button" class="chip" data-category="mixed" aria-pressed="false">
+              Mixed
+            </button>
+            <button type="button" class="chip" data-category="seasonal" aria-pressed="false">
+              Seasonal
+            </button>
+            <button type="button" class="chip" data-category="premium" aria-pressed="false">
+              Premium
+            </button>
+          </div>
+
           <!-- Bouquet cards are rendered dynamically from the API (js/main.js) -->
           <ul class="bouquets__grid"></ul>
 
-          <a class="button bouquets__more" href="#bouquets">Show More</a>
+          <button type="button" class="button bouquets__more" hidden>Show More</button>
         </div>
       </section>
 

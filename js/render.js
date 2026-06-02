@@ -54,3 +54,11 @@ export function setListState(container, message, isError = false) {
 export function clearList(container) {
   container.innerHTML = "";
 }
+
+/**
+ * Ask AOS to recalculate scroll-trigger offsets after the document height
+ * changes (e.g. a list grew). Safe no-op if AOS isn't loaded.
+ */
+export function refreshAOS() {
+  if (window.AOS && typeof window.AOS.refresh === "function") window.AOS.refresh();
+}
